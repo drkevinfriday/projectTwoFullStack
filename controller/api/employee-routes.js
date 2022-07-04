@@ -5,12 +5,13 @@ const Employees = require("../../models/Employees");
 
 router.get("/employees", (req, res) => {
   Employees.findAll({
-    attributes: { exclude: ["password"] },
+    // attributes: { exclude: ["password"] },
   })
     .then((Employee) =>
-      res.render("employeedir", {
-        Employee,
-      })
+      // res.render("employeedir", {
+      //   Employee,
+      // })
+      console.log(Employee)
     ) 
     .catch((err) => {
       console.log(err);
