@@ -23,7 +23,7 @@ class Employees extends Model {}
         allowNull: false,
       },
       department: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       email: {
         type: DataTypes.STRING,
@@ -35,7 +35,7 @@ class Employees extends Model {}
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         validate: {
           len: [4],
         },
