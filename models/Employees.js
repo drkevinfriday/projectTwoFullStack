@@ -33,13 +33,7 @@ class Employees extends Model {}
           isEmail: true,
         },
       },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-          len: [4],
-        },
-      },
+      
     },
     {
       sequelize,

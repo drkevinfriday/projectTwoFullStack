@@ -59,7 +59,7 @@ async function loginFormHandler(event) {
 
         document.location.replace('homepage')
       }else{
-        alert(repsonse.statusText);
+        alert(response.statusText);
       }
     }
   }

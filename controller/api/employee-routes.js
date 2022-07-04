@@ -26,7 +26,7 @@ router.get("/", (req, res) => {
       lastName: req.body.lastName,
       department: req.body.department,
       email: req.body.email,
-      password: req.body.password,
+     
     })
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => {
