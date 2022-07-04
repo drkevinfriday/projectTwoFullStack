@@ -17,6 +17,7 @@ async function signupFormHandler(event) {
           email,
           password
         }),
+        headers: { 'Content-Type': 'application/json' },
       });
       console.log(response)
 
