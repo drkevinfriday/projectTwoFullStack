@@ -3,7 +3,7 @@ const Employees = require("../../models/Employees");
 
 // http://localhost:3001/api/employees/
 
-router.get("/", (req, res) => {
+router.get("/employees", (req, res) => {
   Employees.findAll({
     attributes: { exclude: ["password"] },
   })

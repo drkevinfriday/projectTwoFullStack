@@ -24,6 +24,10 @@ router.get("/signUp", (req, res) => {
   res.render("signup");
 });
 
+router.get('/employees', (req,res)=>{
+  res.render("employeedir")
+})
+
 
 
 
