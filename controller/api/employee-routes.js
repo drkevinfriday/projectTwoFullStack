@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
       res.render("employeedir", {
         Employee,
       })
-    )
+    ) 
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);

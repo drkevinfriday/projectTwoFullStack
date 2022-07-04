@@ -58,14 +58,15 @@
                                     <tr id="index-1" class="t-row is-fullwidth">
                                         <td id="selectDirRow" class="has-text-centered"><input type="checkbox" id="select"></td>
                                         <td id="icon" class="has-text-centered"><img src="/img/profileicon.png" id="small_icon"></th>
-                                        <td id="name" class="has-text-centered"><a href="/api/employeeprofile">Employee 1</a></td>
+                                        <td id="name" class="has-text-centered"><a href="/api/employeeprofile">{{employee.dataValues.firstName}}</a></td>
                                         <td id="email"class="has-text-centered">Employee1.lastName@company.com</td>
                                         <td id="dept"class="has-text-centered">Information Technology</td>
                                         <td id="start-date"class="has-text-centered">6/24/24</td>
                                     </tr>
                                     {{!-- <!--For each employee from the employee database, the data will fill up the table--> --}}
-                                    {{#each employees}}
-                                        {{>employee-row}}
+                                    {{#each employee}}
+                                        {{!-- {{>employee-row}} --}}
+                                        <p>{{employee.firstname}}</p>
                                     {{/each}}                                    
                                 </tbody>
                             </table>
