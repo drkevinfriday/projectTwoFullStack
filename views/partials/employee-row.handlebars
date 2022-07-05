@@ -1,5 +1,6 @@
 {{!-- This is under the assumption that the indivdual employee object gets passed into the employree directory. 
 To do: Need a start date route? Maybe the date that the add employee form was created? --}}
+{{!-- Also need the page to link to that employee's profile --}}
 
 <tr id="index-"{{id}} class="t-row is-fullwidth">
     <td id="selectDirRow" class="has-text-centered"><input type="checkbox"></td>
@@ -7,5 +8,4 @@ To do: Need a start date route? Maybe the date that the add employee form was cr
     <td id="name" class="has-text-centered"><a src="/api/employeeprofile/{{id}}">{{firstName}} {{lastName}}</a></td>
     <td id="email"class="has-text-centered">{{email}}</td>
     <td id="dept"class="has-text-centered">{{department}}</td>
-    <td id="start-date"class="has-text-centered">{{start-date}}</td>
 </tr>
