@@ -23,12 +23,9 @@ router.get("/signUp", (req, res) => {
   console.log('signup fired')
   res.render("signup");
 });
-
-router.get('/employees', (req,res)=>{
-  res.render("employeedir")
-})
-
-
-
+//if you add this then the page will generate without the api in it
+// router.get('/employees', (req,res)=>{
+//   res.render("employeedir")
+// })
 
 module.exports = router;

@@ -3,20 +3,33 @@ const Employees = require("../../models/Employees");
 
 // http://localhost:3001/api/employees/
 
-router.get("/employees", (req, res) => {
-  Employees.findAll({
-    // attributes: { exclude: ["password"] },
-  })
-    .then((Employee) =>
-      // res.render("employeedir", {
-      //   Employee,
-      // })
-      console.log(Employee)
-    ) 
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+router.get('/', (req, res) => {
+    //refer to 14.1.6 for breakdown  
+    Employees.findAll()
+      .then(employeeData => {
+        const employees = employeeData.map(employee => employee.get({ plain: true }));
+        console.log(Employees);
+        // const employees = [
+        //   {
+        //     firstName: "valerie",
+        //     lastName: "lopez",
+        //     department: "art",
+        //     email: "work@gmail.com"
+        //   },
+        //   {
+        //     firstName: "Lily",
+        //     lastName: "lopez",
+        //     department: "dog",
+        //     email: "work@gmail.com"
+        //   }
+        // ];
+          //employees has to equal to the array of employee objects
+          res.render("employeedir", {employees});
+        })
+        .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+        });
 });
 
 
