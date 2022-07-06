@@ -32,7 +32,7 @@ router.post('/signup', (req, res) => {
         res.json(dbUserData);
 
       })
-      res.render("login")
+      res.redirect('/');
     })
     .catch(err => {
       console.log(err);
@@ -69,7 +69,7 @@ router.post('/login', (req, res) => {
     res.json({ user: dbUserData, message: 'You are now logged in!' });
    
     });
-    res.render('homepage')
+    res.redirect('/homepage');
   });
 });
 

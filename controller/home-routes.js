@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 
 router.get('/', (req,res)=>{
   if (req.session.loggedIn){
-    res.redirect('homepage');
+    res.render('homepage');
     return
   }
   res.render('homepage')
