@@ -23,11 +23,11 @@
                                 <input id="searchBar" placeholder="Search" class="has-text-centered">
                             </div>
                             {{!-- <!--buttons for actions will appear besides the search input in mobile--> --}}
-                            <div id="pageButtons" class="field is-grouped column p-0  my-1 is-hidden-desktop is-mobile has-text-right">
+                            <div id="pageButtons" class="mobileButtons field is-grouped column p-0  my-1 is-hidden-desktop is-mobile has-text-right">
                                 {{!-- <!--buttons to edit/create/or remove content from the directory--> --}}
                                 <a href="/api/addemployee" class="pageBtnM my-0 py-2 button has-text-centered is-responsive has-text-weight-normal ">Add employee</a>
-                                <button class="pageBtnM button has-text-centered my-0 py-2 is-responsive has-text-weight-normal">Edit employee</button>
-                                <button id="removeBtn" class="pageBtnM button my-0 py-2 has-text-centered is-responsive has-text-weight-normal ">Remove employees</button>
+                                <button class="editBtn pageBtnM button has-text-centered my-0 py-2 is-responsive has-text-weight-normal">Edit employee</button>
+                                <button id="removeBtn" class="removeBtn pageBtnM button my-0 py-2 has-text-centered is-responsive has-text-weight-normal ">Remove employees</button>
                             </div>
                         </div>
                         
@@ -55,12 +55,11 @@
                                     <!--This information will be added dynamically, placeholders for now-->
                                     <!--leave this first row as sample--> --}}
                                     {{!-- <tr id="index-1" class="t-row is-fullwidth">
-                                        <td id="selectDirRow" class="has-text-centered"><input type="checkbox" id="select"></td>
+                                        <td id="selectDirRow" class="has-text-centered"><input type="checkbox" id="select" class="selected"></td>
                                         <td id="icon" class="has-text-centered"><img src="/img/profileicon.png" id="small_icon"></th>
-                                        <td id="name" class="has-text-centered"><a href="/api/employeeprofile">{{[0].firstName}}</a></td>
-                                        <td id="email"class="has-text-centered">{{[0].email}}</td>
-                                        <td id="dept"class="has-text-centered">{{department}}</td>
-                                        <td id="start-date"class="has-text-centered">6/24/24</td>
+                                        <td id="name" class="nameLink has-text-centered"><a href="/api/employeeprofile"><p>FirstName</p></a></td>
+                                        <td id="email"class="has-text-centered"><p>Email</p></td>
+                                        <td id="dept"class="has-text-centered"><p>department</p></td>
                                     </tr> --}}
                                     {{!-- <!--For each employee from the employee database, the data will fill up the table--> --}}
                                     {{#each employees as |employee|}}

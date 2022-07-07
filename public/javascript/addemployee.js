@@ -22,5 +22,7 @@ async function newFormHandler(event) {
     } else {
       alert(response.statusText);
     }
-  }
-  document.getElementById("continue").addEventListener("click", newFormHandler);
+  };
+
+  $('#continue').click(newFormHandler);
+  // document.getElementById("continue").addEventListener("click", newFormHandler);
