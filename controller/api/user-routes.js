@@ -32,12 +32,12 @@ router.post('/signup', (req, res) => {
         res.json(dbUserData);
 
       })
-      res.redirect('/');
+      // res.redirect('/');
     })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
-});
+  });
 });
 router.post('/login', (req, res) => {
   // expects {email: 'test@gmail.com', password: 'password1234'}
@@ -66,10 +66,11 @@ router.post('/login', (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
+    
+    console.log('You are now logged in!')  
     res.json({ user: dbUserData, message: 'You are now logged in!' });
    
     });
-    res.redirect('/homepage');
   });
 });
 
