@@ -173,7 +173,7 @@ html{
     font-size: 12px;
 }
 
-#left-nav .button{
+#navButtons .button{
     line-height:12px;
     border:none;
     border-radius:5px;
@@ -183,6 +183,18 @@ html{
 
 .navBtn{
     background-color: var(--secondaryTeal);
+}
+
+
+.pageBtn{
+    background-color:var(--darkGray);
+    color:var(--primaryTeal);
+}
+
+.pageBtn.actionBtn{
+    background-color:var(--accent);
+    color: var(--lightGray);
+    border-color:var(--accent);
 }
 
 .logoutBtn{
@@ -199,21 +211,12 @@ html{
     color:var(--lightGray);
 }
 
-.pageBtn{
-    background-color:var(--accent);
-}
-
-.pageBtn#removeBtn{
-    background-color:var(--darkGray);
-    color:var(--primaryTeal);
-} 
-
 .pageBtnM{
     color: var(--lightGray);
     background-color:var(--secondaryTeal);
 }
 
-.pageBtnM#removeBtn{
+.pageBtnM.actionBtn{
     color: var(--lightGray);
     background-color:var(--accent);
 }
