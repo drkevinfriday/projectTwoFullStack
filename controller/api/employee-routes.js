@@ -9,20 +9,6 @@ router.get('/', (req, res) => {
       .then(employeeData => {
         const employees = employeeData.map(employee => employee.get({ plain: true }));
         console.log(Employees);
-        // const employees = [
-        //   {
-        //     firstName: "valerie",
-        //     lastName: "lopez",
-        //     department: "art",
-        //     email: "work@gmail.com"
-        //   },
-        //   {
-        //     firstName: "Lily",
-        //     lastName: "lopez",
-        //     department: "dog",
-        //     email: "work@gmail.com"
-        //   }
-        // ];
           //employees has to equal to the array of employee objects
           res.render("employeedir", {employees});
         })
