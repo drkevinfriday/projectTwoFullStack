@@ -181,6 +181,12 @@ html{
     box-shadow: 3px 3px var(--primaryTeal);
 }
 
+#log-out{
+    background-color:var(--primaryTeal);
+    border:none;
+    color:var(--lightGray);
+}
+
 .navBtn{
     background-color: var(--secondaryTeal);
 }
@@ -329,12 +335,18 @@ table#directory td{
     border-radius: 7px;
 }
 /******End of CSS for Add employee Page******/
+.bg-color{
+    background: linear-gradient(to left,var(--primaryTeal), var(--secondaryTeal));
+}
+
+
 #home-nav {
     display: flex;
-    background-color: var(--secondaryTeal);
+    background-image: url("../img/Asset_2.png");
+    background-size:30%;
+    background-repeat:no-repeat;
+    background-position:right 10% top 25%;
     overflow: hidden;
-    /* max-height: 250px;
-    min-height: 250px; */
 }
 
 .profile-image {
@@ -345,10 +357,12 @@ table#directory td{
 }
 
 .nav-img {
-    background-image: url(/public/images/Asset2.png);
     background-size: auto;
-    /* position: relative;
-    top: -70px; */
+}
+
+.home-cards img{
+    height:85%;
+    width:auto;
 }
 
 
@@ -398,158 +412,46 @@ table#directory td{
     box-shadow: 15px 15px var(--accent);
 }
 
+@media only screen and (max-width:1023px){
+    #home-nav{
+    background-image:none;
+    }
+}
+
 #second-card {
     margin-top: 2%;
 }
 
-#profileBlock {
-    background-color: var(--secondaryTeal);
-    margin: 50px 30px 30px 40px;
-    border-radius: 15px;
-}
-#profileInfo {
-    background-color: var(--secondaryTeal);
-    border-radius: 30px;
-    padding: 12px;
-    margin: 0px 10px 0px 10px;
-}
-#blockHeader {
-    color: var(--lightGray);
-    background-color: var(--secondaryTeal);
-    margin-left: 7px;
-    text-align: justify;
-    border-radius: 10px;
-    padding: 10px;
-}
-#jobHeader {
-    color: var(--accent);
-    background-color: var(--lightGray);
-    margin-left: 25px;
-    margin-right: 15px;
-    text-align: justify;
-    border-radius: 15px;
-    padding: 10px;
-}
-#jobBlock {
-    background-color: var(--lightGray);
-    margin-left: 255px;
-    margin-right: 15px;
-    margin-top: -20px;
-    border-radius: 10px;
-}
-#jobInfo{
-    margin-right: 20px;
-}
-#profileImg2 {
-    padding: 60px;
-    margin-left: 16px;
-    background-color: var(--secondaryTeal);
-}
-#imgHolder {
-    background-color: var(--secondaryTeal);
-    border-radius: 10px;
-    margin-bottom: 25px;
-}
-#employeeHolder {
-    background-color: var(--lightGray);
-    border-radius: 20px;
-    margin-bottom: 25px;
-    margin-top: -30px;
-    margin-left: 25px;
-    margin-right: 20px;
-    padding: 0px 20px 0px 20px;
-}
-#employeeName2 {
-    color: var(--lightGray);
-    background-color: var(--secondaryTeal);
-    text-align: left;
-    margin: auto;
-    align-self: flex-start;   
-}
-#workInfo{
-    color: var(--lightGray);
-    background-color: var(--secondaryTeal);
-    align-items:flex-start;
-    margin-left: 300px;
-    margin-top: -30px;
-}
-#workBlock{
-    margin: 0px 0px 0px 0px;
-}
-#emailData {
-    color: var(--lightGray);
-    padding: 0px;
-    margin-top: -15px;
-}
-#phoneInfo {
-    color: var(--lightGray);
-    background-color: var(--secondaryTeal);
-    align-items:flex-start;
-    margin-top: 0px;
-    margin-left: 300px;
-}
-#phoneData {
-    color: var(--lightGray);
-    padding: 0px;
-    margin-top: -15px;
-    margin-left: 320px;
-}
-#idInfo{
-    color: var(--lightGray);
-    background-color: var(--secondaryTeal);
-    align-items:flex-start;
-    margin-top: 5px;
-    margin-left: 305px;
-}
-#idData{
-    color: var(--lightGray);
-    padding: 0px;
-    margin-top: -15px;
-    margin-left: 335px;
-}
-#jobHolder{
-    margin-top: -160px;
-}
-#employeeBlock{
-    background-color: var(--lightGray);
-    padding: 30px 0px 0px 30px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-#roleInfo{
-    padding: 0px 0px 20px 0px;
-    margin-left: -45px;
-}
-#roleData{
-    margin-top:-80px;
-    margin-left: 130px;
-}
-#deptInfo{
-    margin-left: -55px;
-    margin-top: -10px;
-}
-#deptData{
-    margin-left: 130px;
-    margin-top: -50px;
-}
-#managerInfo{
-    margin-left: -55px;
-    margin-top: -10px;
-}
-#managerData{
-    margin-left: 130px;
-    margin-top: -70px;
-}
-#salaryInfo{
-    margin-left: -55px;
-    margin-top: -10px;
-}
-#salaryData{
-    margin-left: 130px;
-    margin-top: -50px;
+.nameSection{
+    border-right:2px solid var(--lightGray);
 }
 
-#idImg{
-    margin-right: 80px;
-    margin-left: -25px;
+#profileHolder {
+    background-color: var(--secondaryTeal);
+    color: var(--lightGray);
+    border-radius: 15px;
+}
+
+#profileHolder p{
+    color:var(--lightGray);
+}
+
+#jobHolder{
+    background-color: white;
+    border-radius: 7px;
+    border: 2px solid var(--secondaryTeal);
+    color: var(--primaryTeal);
+}
+
+#jobHeader{
+    color:var(--accent);
+}
+
+#workInfo, #phoneInfo, #idInfo, #roleInfo, #deptInfo, #managerInfo, #salaryInfo{
+    font-weight: bolder;
+}
+
+#profileImg2{
+    max-height:50%;
+    max-width: 50%;
 }

@@ -76,7 +76,7 @@ async function saveChanges(){
 
     //Revert text back
     $(".saveBtn").addClass("editBtn");
-    $(".editBtn").removeClass("saveBtna").html("Edit Employee");
+    $(".editBtn").removeClass("saveBtn").html("Edit Employee");
 }
 
 //listen to see if any rows are selected

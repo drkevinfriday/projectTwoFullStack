@@ -9,23 +9,19 @@
     <title>Employee Aide</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
-    {{#if loggedIn}}
+    {{!-- {{#if loggedIn}}
     <button id="log-out button1"class="button btn-no-style">logout</button>
     {{else}}
     <a href="/" class="button mt-4 mr-6" id="view">login</a>
-    {{/if}}
+    {{/if}} --}}
     {{{body}}}
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>   
     {{/if}}
     <script src="/javascript/navbardropdown.js"></script>
-<<<<<<< HEAD
-    
-    <script src="/javascript/editEmployee.js"></script>
-=======
     <script src="/javascript/logout.js"></script>
     <script src="/javascript/editRmEmployee.js"></script>
->>>>>>> develop-nick
+    <script src="/javascript/editRmDept.js"></script>
     <script src="/javascript/addemployee.js"></script>
 {{!-- I only included the closing body tag out here because some pages have a specific class added to the body's html so that it extends the full height. --}}
 </body>

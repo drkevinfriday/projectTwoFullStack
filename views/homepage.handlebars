@@ -1,66 +1,56 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
-
-    <title>Homepage</title>
-  </head>
+  {{!-- Get User info to input in name after Welcome, --}}
   <body>
-    <nav class="nav" id="home-nav">
-      <div class="profile-image">
-        <img class="profileImage" src="img/profileicon.png" />
-      </div>
-      <div class="container ml-5" id="nav-text">
-        <h1
-          class="is-size-1 has-text-white mt-2 mb-0 has-text-left"
-        >Welcome,</h1>
-        <h1
-          class="is-size-1 has-text-left mt-0"
-          id="Employee-text"
-        >Employee</h1>
-        <p
-          class="is-size-3 has-text-white mt-3 mb-3 has-text-weight-light"
-        >Where would you like to navigate?</p>
-      </div>
-      <div>
-        <img class="nav-img" src="img/Asset 2.png" />
-      </div>
-      <div>
-        <a href="api/employeeprofile">
-          <button class="button mt-4 mr-6" id="view">View Profile</button>
-        </a>
-
-      </div>
+    <div class="bg-color">
+    <nav class="nav py-4" id="home-nav">
+        <div class="profile-image">
+          <img class="profileImage" src="img/profileicon.png" />
+          <button id="log-out" class="logoutBtn button is-size-7 mt-4 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Log Out</button>
+        </div>
+        <div class="container ml-5" id="nav-text">
+          <h1
+            class="is-size-1 has-text-white mt-2 mb-0 has-text-left"
+          >Welcome,</h1>
+          <h1
+            class="is-size-1 has-text-left mt-0"
+            id="Employee-text"
+          >{{user}}</h1>
+          <p
+            class="is-size-3 has-text-white mt-3 mb-3 has-text-weight-light"
+          >Where would you like to navigate?</p>
+        </div>
+        <div>
+          <a href="api/employeeprofile">
+            <button class="button mt-4 mr-6" id="view">View Profile</button>
+          </a>
+        </div>
     </nav>
-    <div class="spacer ml-6 mr-6 pb-6 mb-6">
-        <section class="section p-7 mb-7" id="lower-body">
-            <div class="container pb-6 pt-6">
+    </div>
+    <div class="spacer m-6 p-1">
+        <section class="section" id="lower-body">
+            <div class="container py-3 my-auto">
                     <div class="columns">
-                        <div class="column">
-                            <div class="card has-text-centered p-6 m-2" id="employee-card">
+                        <div class="column mx-6">
+                            <div class="card has-text-centered py-6" id="employee-card">
                                 <div class="card-image">
-                                    <figure class="home-cards image">
-                                        <img class="image-size" src="./img/people.png" alt="people">
+                                    <figure class="home-cards image px-6 pb-6">
+                                        <img class="image-size m-auto" src="./img/people.png" alt="people">
                                     </figure>
                                 </div>
-                                <div class="card-content">
+                                <div class="card-content p-0">
                                   <a href="api/employees">
                                     <button class="button" id="button4">View Employees</button>
                                   </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
-                            <div class="card has-text-centered p-6 m-2" id="card-size">
+                        <div class="column mx-6">
+                            <div class="card has-text-centered py-6" id="card-size">
                                 <div class="card-image">
-                                    <figure class="home-cards image ">
-                                        <img class="image-size" src="./img/data.png" alt="books">
+                                    <figure class="home-cards image px-6 pb-6">
+                                        <img class="image-size m-auto" src="./img/data.png" alt="books">
                                     </figure>
                                 </div>
-                                <div class="card-content">
+                                <div class="card-content p-0">
                                   <a href="api/departments">
                                     <button class="button" id="button5">View Department</button>
                                   </a>
@@ -72,23 +62,3 @@
             </div>
         </section>
     </div>
-  </body>
-</html>
-
-{{!-- <ol> Start of snippet
-  <li>
-    <article class="post">
-      <div class="title">
-      </div>
-      <div class="meta">
-        {{name}}
-        is supervised by 
-        {{supervisor}}
-        on
-        {{created_at}}
-        Test Code Works for homepage route
-        {{!-- <a href="/departments/{{id}}">{{comments.length}} comment(s)</a> --}}
-{{! </div>
-    </article>
-  </li>
-</ol>End of code snippet }}
