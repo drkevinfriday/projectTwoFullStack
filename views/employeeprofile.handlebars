@@ -1,78 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Company Name</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
 
 <body id="directoryPage" class="maxHt">
     <div class="maxHt columns is-tablet is-centered p-0">
         <!--Left column with navigation and action buttons, only appears on desktops on left side-->
-        <div id="left-nav" class="column is-2 is-hidden-touch">
-            <div class="maxHt p-4 is-flex is-flex-direction-column is-justify-content-space-between">
-                <!--seperate the profile with the first set of buttons to align them to the top-->
-                <div id="top-portion">
-                    <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around pb-0">
-                        <p class="is-size-4 profileText">Welcome,</p>
-                        <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="/img/profileicon.png"></img>
-                        <p id="employeeName" class="is-size-5 profileText">Employee 1</p>
-                    </div>
-
-                    <!--These buttons are links to other pages-->
-                    <div id="navButtons" class="buttons has-text-weight-medium is-mobile mb-3">
-                        <!--buttons for links to other pages-->
-                        <a href="./homepage.html" class="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Home</a>
-                        <a href="./employeedir.html" class="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Employees</a>
-                        <a href="./departmentdir.html" class ="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Department</a>
-                    </div>
-                </div>
-                <!--this will align to the bottom, these buttons do something within the page-->
-                <div id="pageButtons" class="buttons pb-3 is-mobile has-text-weight-medium">
-                    <!--buttons to edit/create/or remove content from the directory-->
- {{!-- ADD EMPLOYEE --}}
-                    <a href="./addemployee.html" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Add employee</a>
-                    <button class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Edit employee</button>
-                    <button id="removeBtn" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Remove employees</button>
-                </div>
-            </div>
-        </div>
+        {{>nonDirLeftNav username="user"}}
 
         <!--page information for the right column-->
         <div id="right-content" class="maxHt column is-full-mobile mx-0 p-0">
             <div class="is-fullwidth">
                 <!-- Only appears on mobile views-->
-                <section id="top-nav" class="is-hidden-desktop is-mobile">
-                    <!--Hamburger menu for mobile-->
-                    <nav id="top-nav" class="is-hidden-desktop navbar px-4" role="navigation" aria-label="main navigation">
-                        <div class="navbar-brand mt-3 ">
-                            <a class="navbar-item" href="https://bulma.io">
-                                <div id="userProfile" class="is-flex">
-                                    <p class="is-size-4 profileText mr-2">Welcome,</p>
-                                    <p id="employeeName" class="is-size-4 profileText">Employee 1</p>
-                                </div>
-                            </a>
-                            <a role="button" class="navbar-burger mobile-nav" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                                <span aria-hidden="true"></span>
-                                <span aria-hidden="true"></span>
-                                <span aria-hidden="true"></span>
-                            </a>
-                        </div>
-                      
-                        <div id="navbarBasicExample" class="navbar-menu mobile-nav"id ="" >
-                            <div class="navbar-end">
-                              <a class="navbar-item" href="./homepage.html">Homepage</a>
-                        
-                              <a class="navbar-item" href="./employeedir.html">Employee Directory</a>
-                  
-                              <a class="navbar-item" href="./departmentdir.html">Department Directory</a>
-                            </div>
-                        </div>
-                    </nav>
-                </section>
+                {{>top-nav username="user"}}
 
                 <!--information located on top of page, company name and page path-->
                 <section id="companyName" class="pt-2">
@@ -81,54 +17,56 @@
                 </section>
 
                 <!--the part of the page where the content differs. -->
-
-            <div id="profileHolder">
-                <div id="profileBlock" class="container is-parent">
-                    <div id="profileInfo" class="columns is-parent is-8">
-                        <h2 id="blockHeader" class="columns is-8 title is-2">Personal Information</h2></div>
-                        <div id="imgHolder" class="column is-4 is-flex">
-                        <img id="profileImg2" class="column is-8 inline-flex is-left" src="/img/profileicon.png"></img>
-                            <h2 id="employeeName2" class="column is-6 has-text-left is-size-4 is-narrow">Employee 1<br>
-                            Last Name</h2>
-                            <div id="workBlock" class="container is-parent">
-                            <div id="workInfo" class="column is-6 is-flex is-offset-1 is-right is-gapless is-0">Work Email:</div>
-                               <h2 id="emailData" class="column is-8 is-offset-7 is-flex is-gapless is-0">employee1lastname@company.com</h2>
-                               <div id="phoneInfo" class="column is-6 is-offset-1 is-flex is-right is-gapless is-0">Phone Number:</div>
-                               <h2 id="phoneData" class="column is-8 is-offset-10 is-flex is-gapless is-0">(512)xxx-xxxx</h2>
-                               <div id="idInfo" class="column is-6 is-flex is-offset-1 is-right is-gapless is-0">Employee ID:</div>
-                               <h2 id="idData" class="column is-8 is-offset-10 is-flex is-gapless is-0">xxxxxxx</h2>
-                                        </div>                           
-                                    </div>
-                                </div>
-                            </div>                    
+                <div class="m-6 px-6">
+                    <div id="profileHolder" class="columns is-multiline is-8 is-mobile mb-6 px-5">
+                        <div id="profileInfo" class="mb-0 column is-10">
+                            <p id="blockHeader" class="title">Personal Information</p>
                         </div>
-                 </div>
-            </div>
-            <div id="jobHolder">
-                <div id="jobBlock" class="container is-parent">
-                    <div id="jobInfo" class="columns is-parent is-8">
-                        <h2 id="jobHeader" class="column is-8 title is-2">Employee Information</h2></div>
-                        <div id="employeeHolder" class="columns is-4 is-flex">
-                            <div id="employeeBlock" class="container is-parent">
-                            <div id="roleInfo" class="column is-3 is-flex is-gapless is-0">Role at Company:</div>
-                            <div id="roleData" class="column is-3 is-flex is-gapless is-0">Web Developer</div>
-                            <div id="deptInfo" class="column is-3 is-flex is-gapless is-0">Department:</div>
-                            <div id="deptData" class="column is-3 is-flex is-gapless is-0">Information Technology</div>
-                            <div id="managerInfo" class="column is-3 is-flex is-gapless is-0">Reporting Manager:</div>
-                            <div id="managerData" class="column is-3 is-flex is-gapless is-0">Employee 7 Last Name</div>
-                            <div id="salaryInfo" class="column is-3 is-flex is-gapless is-0">Salary:</div>
-                            <div id="salaryData" class="column is-3 is-flex is-gapless is-0">$xxx,xxx</div>
+                        <div class="nameSection column is-6 mb-4 pb-auto mx-auto px-austo">
+                            <div id="imgHolder" class="columns is-multiline is-mobile is-centered has-text-centered is-vcentered my-auto">
+                                <img id="profileImg2" class="column is-4-desktop" src="/img/profileicon.png"></img>
+                                <p id="employeeName2" class="column is-6-desktop is-10-mobile my-auto is-size-3">{{firstName}}<br>{{lastName}}</p>
                             </div>
-                            <img id="idImg" class="column is-5 is-flex is-gapless is-0" src="/img/id_Card.png"></img>
+                        </div>
+                        <div id="workBlock" class="column is-6 mx-auto px-auto py-auto my-auto">
+                            <div class="columns is-multiline is-centered is-vcentered has-text-centered p-5">
+                                <div class="mb-2 column is-10">
+                                    <h2 id="workInfo" class="is-size-6">Work Email:</h2>
+                                    <h2 id="emailData" class="is-size-6">{{email}}</h2>
+                                </div>
+                                <div class="mb-2 column is-10">
+                                    <h2 id="phoneInfo" class="is-size-6">Phone Number:</h2>
+                                    <h2 id="phoneData" class="is-size-6">{{phone}}</h2>
+                                </div>
+                                <div class="mb-2 column is-10">
+                                    <h2  id="idInfo" class="is-size-6">Employee ID:</h2>
+                                    <h2 id="idData" class="is-size-6">{{employeeId}}</h2>
+                                </div>
+                            </div>
+                        </div>                           
+                    </div> 
+
+                    <div id = "job" class="columns is-mobile is-centered is-vcentered">
+                        <div id="jobHolder" class="column is-7">
+                            <div id="jobInfo" class="columns is-fullwidth is-mobile">
+                                <p id="jobHeader" class="column title ml-4">Employee Information</p>
+                            </div>
+                            <div id="employeeHolder" class="columns is-multiline is-mobile">
+                                <div id="roleInfo" class="column is-5 is-size-5 ml-4">Role at Company:</div>
+                                <div id="roleData" class="column is-5 is-size-5 ml-4">{{role}}</div>
+                                <div id="deptInfo" class="column is-5 is-size-5 ml-4">Department:</div>
+                                <div id="deptData" class="column is-5 is-size-5 ml-4">{{department}}</div>
+                                <div id="managerInfo" class="column is-5 is-size-5 ml-4">Reporting Manager:</div>
+                                <div id="managerData" class="column is-5 is-size-5 ml-4">{{supervisorFirstName}}<br>{{supervisorLastName}}</div>
+                                <div id="salaryInfo" class="column is-5 is-size-5 ml-4">Salary:</div>
+                                <div id="salaryData" class="column is-5 is-size-5 ml-4">{{salary}}</div>
+                            </div>
+                        </div>
+                        <div class="column is-3 m-auto p-auto">
+                            <img id="idImg" src="/img/id_Card.png"></img>
                         </div>
                     </div>
-                </div>   
-            </div>
-        </div>
-   
+                </div>
+            </div>   
         </div>
     </div>
-    <script src="./js/navbardropdown.js"></script>
-</body>
-
-</html>

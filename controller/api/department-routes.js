@@ -5,14 +5,16 @@ const Departments = require("../../models/Departments");
 
 // get all users
 router.get("/", (req, res) => {
-  Departments.findAll({
-    attributes: { exclude: ["password"] },
-  })
-    .then((Department) =>
+  Departments.findAll()
+    .then(departmentData => {
+      const departments = departmentData.map(department => department.get({ plain: true}));
+      console.log(departments);
       res.render("departmentdir", {
-        Department,
-      })
-    )
+        departments,
+        user: req.session.username,
+        loggedIn: req.session.loggedIn,
+      });
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);

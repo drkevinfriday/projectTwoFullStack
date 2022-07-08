@@ -4,7 +4,6 @@ const departmentRoutes = require('./department-routes');
 const employeeRoutes = require('./employee-routes');
 const salaryRoutes = require('./salary-routes');
 const userRoutes = require('./user-routes');
-
 const addemployeeroutes = require("./addemployee-routes");
 const employeeprofileroutes = require("./employeeprofile");
 

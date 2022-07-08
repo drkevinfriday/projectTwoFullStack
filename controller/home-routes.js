@@ -6,16 +6,19 @@ router.get("/", (req, res) => {
   res.render("login");
 });
 
-router.get('/', (req,res)=>{
-  if (req.session.loggedIn){
-    res.redirect('homepage');
-    return
-  }
-  res.render('homepage')
-})
+// router.get('/', (req,res)=>{
+//   if (req.session.loggedIn){
+//     res.render('homepage');
+//     return
+//   }
+//   res.render('homepage')
+// })
 
 router.get('/homepage', (req,res)=>{
-res.render("homepage")
+res.render("homepage", {
+  loggedIn: req.session.loggedIn,
+  user:req.session.username
+  })
 })
 
 router.get("/signUp", (req, res) => {

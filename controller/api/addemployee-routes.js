@@ -4,7 +4,9 @@ const Employees = require("../../models/Employees");
 // http://localhost:3001/api/addemployee
 
 router.get("/", (req, res) => {
-  res.render("addemployee");
+  res.render("addemployee",{
+    user: req.session.username, 
+    loggedIn: req.session.loggedIn});
 });
 
 router.post("/", (req, res) => {

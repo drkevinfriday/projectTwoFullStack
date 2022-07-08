@@ -11,7 +11,7 @@
                 <p class="is-size-4 profileText">Welcome,</p>
                 <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="/img/profileicon.png"></img>
                 {{!-- Insert the method to pull the current users --}}
-                <p id="employeeName" class="is-size-5 profileText">{{user.username}}</p>
+                <p id="employeeName" class="is-size-5 profileText">{{this.user}}</p>
             </div>
 
             <!--These buttons are links to other pages-->
@@ -23,11 +23,10 @@
             </div>
         </div>
         <!--this will align to the bottom, these buttons do something within the page-->
-        <div id="pageButtons" class="buttons pb-3 is-mobile has-text-weight-medium">
+        <div id="pageButtons" class="leftButtons buttons pb-3 is-mobile has-text-weight-medium">
             <!--buttons to edit/create/or remove content from the directory-->
-            <a href="" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Add department</a>
-            <button class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Edit department</button>
-            <button id="removeBtn" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Remove department</button>
+            <button class="editDept pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Edit department</button>
+            <button id="removeDept" class="removeDept pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Remove department</button>
         </div>
     </div>
 </div>

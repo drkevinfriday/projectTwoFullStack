@@ -1,0 +1,1 @@
+// document.getElementById('viewEmployees').addEventListener('click', loginFormHandler)

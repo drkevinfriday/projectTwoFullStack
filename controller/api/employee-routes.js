@@ -10,7 +10,11 @@ router.get('/', (req, res) => {
         const employees = employeeData.map(employee => employee.get({ plain: true }));
         console.log(Employees);
           //employees has to equal to the array of employee objects
-          res.render("employeedir", {employees});
+          res.render("employeedir", {
+            employees, 
+            user: req.session.username, 
+            loggedIn: req.session.loggedIn
+          });
         })
         .catch(err => {
           console.log(err);

@@ -17,6 +17,7 @@ async function signupFormHandler(event) {
           email,
           password
         }),
+      
       });
       console.log(response)
 
@@ -26,6 +27,7 @@ async function signupFormHandler(event) {
         document.location.replace('/')
       }else{
         alert(response.statusText);
+        window.location.reload();
       }
       
     }

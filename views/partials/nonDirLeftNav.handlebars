@@ -6,7 +6,7 @@
         <!--seperate the profile with the first set of buttons to align them to the top-->
         <div id="top-portion">
             <div id="userProfile" class="pt-3 mb-3 is-flex is-flex-direction-column is-align-items-center is-justify-content-space-around pb-0">
-                    <button id="log-out" class="logoutBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Log Out</button>
+                <button id="log-out" class="logoutBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Log Out</button>
                 <p class="is-size-4 profileText">Welcome,</p>
                 <img id="profileImg" class="is-size-5 profileText mt-4 mb-4 px-auto" src="/img/profileicon.png"></img>
                 {{!-- Insert the method to pull the current users --}}
@@ -20,13 +20,6 @@
                 <a href="/api/employees" class="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Employees</a>
                 <a href="/api/departments" class ="navBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium">Department</a>
             </div>
-        </div>
-        <!--this will align to the bottom, these buttons do something within the page-->
-        <div id="pageButtons" class="leftButtons buttons pb-3 is-mobile has-text-weight-medium">
-            <!--buttons to edit/create/or remove content from the directory-->
-            <a href="/api/addemployee" class="pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Add employee</a>
-            <button id ="editBtn" class="editBtn pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Edit employee</button>
-            <button id ="removeBtn" class="removeBtn pageBtn button is-size-7 mb-2 has-text-centered is-normal is-responsive is-hovered is-fullwidth has-text-weight-medium py-2">Remove employees</button>
         </div>
     </div>
 </div>

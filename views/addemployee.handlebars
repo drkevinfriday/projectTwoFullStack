@@ -1,11 +1,11 @@
 <body id="directoryPage" class="maxHt">
     <div class="maxHt columns is-tablet is-centered p-0">
-        {{>employee-left-nav}}
+        {{>nonDirLeftNav username="user"}}
 
         <!--page information for the right column-->
         <div id="right-content" class="maxHt column is-full-mobile mx-0 p-0">
             <div class="is-fullwidth">
-                {{>top-nav}}
+                {{>top-nav username="user"}}
 
                 <!--information located on top of page, company name and page path-->
                 <section id="companyName" class="pt-2">
@@ -18,7 +18,7 @@
 
                 <!--**************************************-->
                 <!--START of KEITH'S SIGN UP PAGE CODE-->
-                <div class="container">
+                <div class="container my-auto mx-6-desktop mx-auto-tablet py-auto px-auto">
                     <div class="column is-9 mx-auto">
                         <div class="card py-5 px-6 mx-3" id="addEmployee">
                             <form class="field px-5">

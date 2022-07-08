@@ -3,13 +3,13 @@
 <body id="directoryPage" class="maxHt">
     <div class="maxHt columns is-tablet is-centered p-0">
         {{!-- partial for left nav --}}
-        {{>dept-left-nav}}
+        {{>dept-left-nav username="user"}}
 
         <!--page information for the right column-->
         <div id="right-content" class="maxHt column is-full-mobile mx-0 p-0">
             <div class="is-fullwidth">
                 {{!-- partial for top nav when in mobile view --}}
-                {{>top-nav}}
+                {{>top-nav username="user"}}
                 <!--information located on top of page, company name and page path-->
                 <section id="companyName" class="pt-2">
                     <p id="titleName" class="title pl-6 pt-3 pb-2 is-size-3 has-text-weight-normal">Company name</p>
@@ -25,11 +25,10 @@
                                 <input id="searchBar" placeholder="Search" class="has-text-centered">
                             </div>
                             <!--buttons for actions will appear besides the search input in mobile-->
-                            <div id="pageButtons" class="field is-grouped column p-0  my-1 is-hidden-desktop is-mobile has-text-right">
+                            <div id="pageButtons" class="mobileButtons field is-grouped column p-0  my-1 is-hidden-desktop is-mobile has-text-right">
                                 <!--buttons to edit/create/or remove content from the directory-->
-                                <a href="" class="pageBtnM my-0 py-2 button has-text-centered is-responsive has-text-weight-normal ">Add department</a>
-                                <button class="pageBtnM button has-text-centered my-0 py-2 is-responsive has-text-weight-normal">Edit department</button>
-                                <button id="removeBtn" class="pageBtnM button my-0 py-2 has-text-centered is-responsive has-text-weight-normal">Remove department</button>
+                                <button class="editDept pageBtnM button has-text-centered my-0 py-2 is-responsive has-text-weight-normal">Edit department</button>
+                                <button id="removeBtn" class="removeDept pageBtnM button my-0 py-2 has-text-centered is-responsive has-text-weight-normal">Remove department</button>
                             </div>
                         </div>
                         
@@ -40,7 +39,7 @@
                                     <tr>
                                         <th id="selectDirRow" class="has-text-weight-bold has-text-centered"><input type="checkbox" disabled></td>
                                         <th id="deptIcon" class="has-text-weight-bold has-text-centered"><img src="/img/profileicon.png" id="small_icon"></th>
-                                        <th id="deptDir" class="has-text-weight-bold has-text-centered">Department"</th>
+                                        <th id="deptDir" class="has-text-weight-bold has-text-centered">Department</th>
                                         <th id="supName" class="has-text-weight-bold has-text-centered">Supervisor</th>
                                     </tr>
                                 </thead>
@@ -55,14 +54,14 @@
                                     <!--/////////////////////////////////////////////////////////////////-->
                                     <!--This information will be added dynamically, placeholders for now-->
                                     <!--leave this first row as sample-->
-                                    <tr id="index-1" class="t-row is-fullwidth">
-                                        <td id="selectDirRow"><input type="checkbox"></td>
+                                    {{!-- <tr id="index-1" class="t-row is-fullwidth">
+                                        <td id="selectDirRow"><input type="checkbox" class="deptSelected"></td>
                                         <td id="deptIcon"><img src="/img/profileicon.png" id="small_icon"></th>
-                                        <td id="deptDir">Department1</td>
-                                        <td id="supName">Supervisor1Firstname Supervisor1Lastname/td>
-                                    </tr>
+                                        <td id="deptDir"><p>Department1</p></td>
+                                        <td id="supName"><p>Supervisor1Firstname Supervisor1Lastname</p></td>
+                                    </tr> --}}
                                     {{!-- <!--For each dept from the department array, the data will fill up the table--> --}}
-                                    {{#each departments}}
+                                    {{#each departments as |department|}}
                                         {{>department-row}}
                                     {{/each}}  
                                 </tbody>
