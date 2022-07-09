@@ -5,20 +5,26 @@ const Departments = require("../../models/Departments");
 
 // get all users
 router.get("/", (req, res) => {
-  Departments.findAll()
-    .then(departmentData => {
-      const departments = departmentData.map(department => department.get({ plain: true}));
-      console.log(departments);
-      res.render("departmentdir", {
-        departments,
-        user: req.session.username,
-        loggedIn: req.session.loggedIn,
+  //first find out if session is true, else redirect back to login page.
+  if (req.session.loggedIn) {
+    Departments.findAll()
+      .then(departmentData => {
+        const departments = departmentData.map(department => department.get({ plain: true}));
+        console.log(departments);
+        res.render("departmentdir", {
+          departments,
+          user: req.session.username,
+          loggedIn: req.session.loggedIn,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
       });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  }else{
+    res.redirect('/');
+      return;
+    };
 });
 
 // get one department

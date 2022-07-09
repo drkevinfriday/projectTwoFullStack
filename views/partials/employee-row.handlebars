@@ -2,10 +2,10 @@
 To do: Need a start date route? Maybe the date that the add employee form was created? --}}
 {{!-- Also need the page to link to that employee's profile --}}
 
-<tr id="index-"{{id}} class="t-row is-fullwidth">
+<tr id="index-{{id}}" class="t-row is-fullwidth">
     <td id="selectDirRow" class="has-text-centered"><input type="checkbox" class="selected"></td>
     <td id="icon" class="has-text-centered"><img src="/img/profileicon.png" id="small_icon"></th>
-    <td id="name" class="has-text-centered nameLink"><a src="/api/employeeprofile/{{id}}"><p>{{firstName}} {{lastName}}</p></a></td>
+    <td id="name" class="has-text-centered nameLink"><a href="/api/employeeprofile/{{id}}"><p>{{firstName}} {{lastName}}</p></a></td>
     <td id="email"class="has-text-centered"><p>{{email}}</p></td>
     <td id="dept"class="has-text-centered"><p>{{department}}</p></td>
 </tr>

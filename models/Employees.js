@@ -22,9 +22,6 @@ class Employees extends Model {}
         type: DataTypes.STRING,
         allowNull: false,
       },
-      department: {
-        type: DataTypes.STRING,
-      },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -33,7 +30,33 @@ class Employees extends Model {}
           isEmail: true,
         },
       },
-      
+      phoneNum: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      employeeID: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      role: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      department: {
+        type: DataTypes.STRING,
+      },
+      managerFirst: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      managerLast: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      salary: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     {
       sequelize,

@@ -4,9 +4,14 @@ const Employees = require("../../models/Employees");
 // http://localhost:3001/api/addemployee
 
 router.get("/", (req, res) => {
-  res.render("addemployee",{
-    user: req.session.username, 
-    loggedIn: req.session.loggedIn});
+  if (req.session.loggedIn) {
+    res.render("addemployee",{
+      user: req.session.username, 
+      loggedIn: req.session.loggedIn});
+  }else{
+    res.redirect('/');
+      return;
+  };
 });
 
 router.post("/", (req, res) => {
@@ -14,8 +19,14 @@ router.post("/", (req, res) => {
   Employees.create({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    department: req.body.department,
     email: req.body.email,
+    phoneNum: req.body.phoneNum,
+    employeeID: req.body.employeeID,
+    role: req.body.role,
+    department: req.body.department,
+    managerFirst: req.body.managerFirst,
+    managerLast: req.body.managerLast,
+    salary: req.body.salary,
     password: req.body.password,
   })
     .then((dbUserData) => res.json(dbUserData))

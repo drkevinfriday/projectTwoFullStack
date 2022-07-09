@@ -4,6 +4,8 @@ const Employees = require("../../models/Employees");
 // http://localhost:3001/api/employees/
 
 router.get('/', (req, res) => {
+  //first find out if session is true, else redirect back to login page.
+  if (req.session.loggedIn) {
     //refer to 14.1.6 for breakdown  
     Employees.findAll()
       .then(employeeData => {
@@ -19,7 +21,11 @@ router.get('/', (req, res) => {
         .catch(err => {
           console.log(err);
           res.status(500).json(err);
-        });
+      });
+  }else{
+  res.redirect('/');
+    return;
+  };
 });
 
 

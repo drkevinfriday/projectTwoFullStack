@@ -16,57 +16,59 @@
                     <p id ="pagePath"class="subtitle py-1 pl-6 is-size-6">Employee Directory > Profile </p>
                 </section>
 
-                <!--the part of the page where the content differs. -->
-                <div class="m-6 px-6">
-                    <div id="profileHolder" class="columns is-multiline is-8 is-mobile mb-6 px-5">
-                        <div id="profileInfo" class="mb-0 column is-10">
-                            <p id="blockHeader" class="title">Personal Information</p>
-                        </div>
-                        <div class="nameSection column is-6 mb-4 pb-auto mx-auto px-austo">
-                            <div id="imgHolder" class="columns is-multiline is-mobile is-centered has-text-centered is-vcentered my-auto">
-                                <img id="profileImg2" class="column is-4-desktop" src="/img/profileicon.png"></img>
-                                <p id="employeeName2" class="column is-6-desktop is-10-mobile my-auto is-size-3">{{firstName}}<br>{{lastName}}</p>
+                <section class="my-6 mx-5">
+                    <!--the part of the page where the content differs. -->
+                    <div class="px-4">
+                        <div id="profileHolder" class="columns has-text-centered is-centered is-multiline is-8 is-mobile pb-3 mb-5">
+                            <div id="profileInfo" class="mb-0 column is-10">
+                                <p id="blockHeader" class="title">Personal Information</p>
                             </div>
-                        </div>
-                        <div id="workBlock" class="column is-6 mx-auto px-auto py-auto my-auto">
-                            <div class="columns is-multiline is-centered is-vcentered has-text-centered p-5">
-                                <div class="mb-2 column is-10">
-                                    <h2 id="workInfo" class="is-size-6">Work Email:</h2>
-                                    <h2 id="emailData" class="is-size-6">{{email}}</h2>
-                                </div>
-                                <div class="mb-2 column is-10">
-                                    <h2 id="phoneInfo" class="is-size-6">Phone Number:</h2>
-                                    <h2 id="phoneData" class="is-size-6">{{phone}}</h2>
-                                </div>
-                                <div class="mb-2 column is-10">
-                                    <h2  id="idInfo" class="is-size-6">Employee ID:</h2>
-                                    <h2 id="idData" class="is-size-6">{{employeeId}}</h2>
+                            <div class="nameSection column is-6 p-0 mb-4-desktop is-mobile my-auto">
+                                <div id="imgHolder" class="columns is-multiline is-mobile is-centered has-text-centered is-vcentered my-auto px-auto">
+                                    <img id="profileImg2" class="column is-4-desktop is-hidden-touch" src="/img/profileicon.png"></img>
+                                    <p id="employeeName2" class="column is-6-desktop is-10-mobile my-auto is-size-3">{{employee.firstName}}<br>{{employee.lastName}}</p>
                                 </div>
                             </div>
-                        </div>                           
-                    </div> 
+                            <div id="workBlock" class="column is-6 mx-auto is-mobile p-0 my-auto">
+                                <div class="columns is-multiline is-centered is-vcentered has-text-centered p-5">
+                                    <div class="mb-2 column is-10">
+                                        <p id="workInfo" class="is-size-6">Work Email:</p>
+                                        <p id="emailData" class="is-size-6">{{employee.email}}</p>
+                                    </div>
+                                    <div class="mb-2 column is-10">
+                                        <p id="phoneInfo" class="is-size-6">Phone Number:</p>
+                                        <p id="phoneData" class="is-size-6">{{employee.phoneNum}}</p>
+                                    </div>
+                                    <div class="mb-2 column is-10">
+                                        <p  id="idInfo" class="is-size-6">Employee ID:</p>
+                                        <p id="idData" class="is-size-6">{{employee.employeeID}}</p>
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div> 
 
-                    <div id = "job" class="columns is-mobile is-centered is-vcentered">
-                        <div id="jobHolder" class="column is-7">
-                            <div id="jobInfo" class="columns is-fullwidth is-mobile">
-                                <p id="jobHeader" class="column title ml-4">Employee Information</p>
+                        <div id = "job" class="columns is-mobile is-multiline is-8 is-centered is-vcentered pb-5">
+                            <div id="jobHolder" class="column is-7-desktop is-10-mobile py-5">
+                                <div id="jobInfo" class="columns is-fullwidth is-mobile">
+                                    <p id="jobHeader" class="column has-text-centered title ml-4">Employee Information</p>
+                                </div>
+                                <div id="employeeHolder" class="columns is-centered is-multiline is-mobile">
+                                    <div id="roleInfo" class="column is-5 is-size-5">Role at Company:</div>
+                                    <div id="roleData" class="column is-5 is-size-5">{{employee.role}}</div>
+                                    <div id="deptInfo" class="column is-5 is-size-5">Department:</div>
+                                    <div id="deptData" class="column is-5 is-size-5">{{employee.department}}</div>
+                                    <div id="managerInfo" class="column is-5 is-size-5">Reporting Manager:</div>
+                                    <div id="managerData" class="column is-5 is-size-5">{{employee.managerFirst}}<br>{{employee.managerLast}}</div>
+                                    <div id="salaryInfo" class="column is-5 is-size-5">Salary:</div>
+                                    <div id="salaryData" class="column is-5 is-size-5">{{employee.salary}}</div>
+                                </div>
                             </div>
-                            <div id="employeeHolder" class="columns is-multiline is-mobile">
-                                <div id="roleInfo" class="column is-5 is-size-5 ml-4">Role at Company:</div>
-                                <div id="roleData" class="column is-5 is-size-5 ml-4">{{role}}</div>
-                                <div id="deptInfo" class="column is-5 is-size-5 ml-4">Department:</div>
-                                <div id="deptData" class="column is-5 is-size-5 ml-4">{{department}}</div>
-                                <div id="managerInfo" class="column is-5 is-size-5 ml-4">Reporting Manager:</div>
-                                <div id="managerData" class="column is-5 is-size-5 ml-4">{{supervisorFirstName}}<br>{{supervisorLastName}}</div>
-                                <div id="salaryInfo" class="column is-5 is-size-5 ml-4">Salary:</div>
-                                <div id="salaryData" class="column is-5 is-size-5 ml-4">{{salary}}</div>
+                            <div class="column is-5-desktop is-hidden-touch">
+                                <img id="idImg" class = "m-auto p-auto" src="/img/id_Card.png"></img>
                             </div>
-                        </div>
-                        <div class="column is-3 m-auto p-auto">
-                            <img id="idImg" src="/img/id_Card.png"></img>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>   
         </div>
     </div>
